@@ -130,6 +130,7 @@ public class OverlayCategoryPreferenceController extends AbstractPreferenceContr
                             mContext.getContentResolver(),
                             Settings.Secure.THEME_CUSTOMIZATION_OVERLAY_PACKAGES,
                             UserHandle.USER_CURRENT);
+                    System.out.println("overlayPackageJson: " + overlayPackageJson);
                     JSONObject jsonObject = (overlayPackageJson == null) ? new JSONObject()
                             : new JSONObject(overlayPackageJson);
                     if (jsonObject.has(mCategory)) {
